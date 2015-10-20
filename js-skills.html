@@ -253,8 +253,6 @@ function alertMe(evt) {
 
 $(".tricky-to-find").on('click', alertMe);
 
-
-
 </script>
 
 <div class="hint">
@@ -281,7 +279,13 @@ $(".tricky-to-find").on('click', alertMe);
 </fieldset>
 
 <script>
-  // put your code here
+
+function changeImage(evt) {
+  $("#kittenz-rule").attr("src", "snoopy.jpg");
+}
+
+$("#kittenz-rule").on('dblclick', changeImage);
+
 </script>
 
 <div class="hint">
@@ -314,7 +318,20 @@ $(".tricky-to-find").on('click', alertMe);
 </fieldset>
 
 <script>
-  // put your code here
+
+  myImage = $("#cute-porcupine-image");
+  
+  function showPorcupine() {
+    myImage.attr("style", "initial");
+  }
+
+  function slowPorcupine(evt) {
+    setTimeout(showPorcupine, 1000);
+    myImage.fadeIn(1500);
+  }
+
+  $("#make-a-porcupine").on('click', slowPorcupine);
+
 </script>
 
 <div class="hint">
