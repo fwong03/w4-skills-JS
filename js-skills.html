@@ -161,7 +161,16 @@
 </fieldset>
 
 <script>
-  // code here for above problem
+
+var subForm = document.getElementById("prevent-form-submission-form")
+
+function noSubmit(evt) {
+  alert("Blah.");
+  evt.preventDefault();
+}
+
+subForm.addEventListener('submit', noSubmit);
+
 </script>
 
 <div class="hint">
@@ -191,22 +200,27 @@
 </fieldset>
 
 <script>
+
+
 //  Here's a stub of a function you can use!
 
-//  function reverseString() {
-//    var msg = "Porcupines are cute";
-//
-//    // do some stuff here to reverse that string into a new variable
-//    var newMsg = "This should be the reversed string";
-//
-//    alert(newMsg);
-//  }
+ function reverseString() {
+  var msg = "Porcupines are cute";
+  var chars = msg.split("");
+  var newMsg = "";
+
+  for (var i = chars.length - 1; i > 0; i--) {
+    newMsg += chars[i];
+  }
+
+   alert(newMsg);
+ }
 
 // Here's a stub of event stuff you could use
 //
 
-//  var button = document.getElementById('reverse-string-button');
-//  button.addEventListener('click', reverseString);
+ var button = document.getElementById('reverse-string-button');
+ button.addEventListener('click', reverseString);
 </script>
 
 
@@ -217,6 +231,8 @@
 <h2>jQuery</h2>
 <p>You should use jQuery for these parts.</p>
 <p>We didn't include jQuery in this document, though&mdash;so your first task is to include it!</p>
+
+<script src="https://code.jquery.com/jquery.js"></script>
 
 
 
@@ -230,7 +246,15 @@
 </fieldset>
 
 <script>
-  // code here for above problem
+
+function alertMe(evt) {
+  alert("Pop-up box. Sweet.");
+}
+
+$(".tricky-to-find").on('click', alertMe);
+
+
+
 </script>
 
 <div class="hint">
